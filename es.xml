@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/5.4/language.xsd" languagecode="es" languagename="Español" countrycode="es">
+<import>
+	<category name="calendar.event">
+		<item name="calendar.event.button.jumpToEventThread"><![CDATA[Tema de discusión]]></item>
+		<item name="calendar.event.eventThread.boardID"><![CDATA[Foro]]></item>
+		<item name="calendar.event.eventThread.boardID.description"><![CDATA[Los temas de discusión se crearán en el foro seleccionado.]]></item>
+		<item name="calendar.event.eventThread.info"><![CDATA[{#$eventThread->replies} {if $eventThread->replies == 1}respuesta{else}respuestas{/if}{if $eventThread->replies > 0}, última: {time time=$eventThread->lastPostTime}{/if}]]></item>
+		<item name="calendar.event.eventThread.subject"><![CDATA[{@$event->subject} ({@$event->getFirstEventDate()->getFormattedTimeFrame($__language, true)})]]></item>
+		<item name="calendar.event.eventThread.message"><![CDATA[<p>{$event->username} ha iniciado un nuevo evento:<br>[event]{$event->getFirstEventDate()->eventDateID}[/event]</p>
+<woltlab-quote>{@$event->message}</woltlab-quote>]]></item>
+		<item name="calendar.event.participants.summary"><![CDATA[{#$calendarEventDateParticipation[yes]} participante{if $calendarEventDateParticipation[yes] != 1}s{/if}, {#$calendarEventDateParticipation[maybe]} indecisos y {#$calendarEventDateParticipation[no]} no participante{if $calendarEventDateParticipation[no] > 1}s{/if}]]></item>
+	</category>
+	<category name="wcf.acp.option">
+		<item name="wcf.acp.option.category.calendar.event.eventThread"><![CDATA[Tema de discusión]]></item>
+		<item name="wcf.acp.option.category.calendar.event.eventThread.description"><![CDATA[Los temas de discusión se crean automáticamente para cada nuevo evento en el foro seleccionado.]]></item>
+		<item name="wcf.acp.option.calendar_event_thread_board_id"><![CDATA[Foro]]></item>
+		<item name="wcf.acp.option.calendar_event_thread_board_id.description"><![CDATA[Los temas de discusión se crearán en el foro seleccionado.]]></item>
+		<item name="wcf.acp.option.calendar_event_thread_categories"><![CDATA[Categorías]]></item>
+		<item name="wcf.acp.option.calendar_event_thread_categories.description"><![CDATA[Crear temas de discusión para los eventos de las categorías seleccionadas.]]></item>
+		<item name="wcf.acp.option.calendar_event_thread_single_board"><![CDATA[Foro único para todas las categorías]]></item>
+		<item name="wcf.acp.option.calendar_event_thread_single_board.description"><![CDATA[Los temas de discusión se crearán en el foro especificado, independientemente de las categorías seleccionadas. Si desactivas esta función, podrás editar las categorías deseadas y asignarles un foro específico.]]></item>
+	</category>
+</import>
+</language>
