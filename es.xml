@@ -7,7 +7,7 @@
 		<item name="calendar.event.eventThread.boardID.description"><![CDATA[Los temas de discusión se crearán en el foro seleccionado.]]></item>
 		<item name="calendar.event.eventThread.info"><![CDATA[{#$eventThread->replies} {if $eventThread->replies == 1}respuesta{else}respuestas{/if}{if $eventThread->replies > 0}, última: {time time=$eventThread->lastPostTime}{/if}]]></item>
 		<item name="calendar.event.eventThread.subject"><![CDATA[{@$event->subject} ({@$event->getFirstEventDate()->getFormattedTimeFrame($__language, true)})]]></item>
-		<item name="calendar.event.eventThread.message"><![CDATA[<p>{$event->username} ha iniciado un nuevo evento:<br>[event]{$event->getFirstEventDate()->eventDateID}[/event]</p>
+		<item name="calendar.event.eventThread.message"><![CDATA[<p>{$event->username} ha creado un nuevo evento:<br>[event]{$event->getFirstEventDate()->eventDateID}[/event]</p>
 <woltlab-quote>{@$event->message}</woltlab-quote>]]></item>
 		<item name="calendar.event.participants.summary"><![CDATA[{#$calendarEventDateParticipation[yes]} participante{if $calendarEventDateParticipation[yes] != 1}s{/if}, {#$calendarEventDateParticipation[maybe]} indecisos y {#$calendarEventDateParticipation[no]} no participante{if $calendarEventDateParticipation[no] > 1}s{/if}]]></item>
 	</category>
